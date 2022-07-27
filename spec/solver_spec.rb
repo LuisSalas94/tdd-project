@@ -25,5 +25,16 @@ describe Solver do
 
   end
 
+  describe '#reverse' do
+   it 'Should return the reversed string' do
+     expect(@solver.reverse('hola')).to eql('aloh')
+   end
+ 
+   it 'Should raise an exception if is not a string' do
+     expect { Solver.new.reverse(2) }.to raise_error(ArgumentError)
+   end
+ end
+
+
 
 end
