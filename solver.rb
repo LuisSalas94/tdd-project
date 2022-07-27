@@ -5,6 +5,11 @@ class Solver
     num * factorial(num - 1)
   end
 
+  def reverse(str)
+    raise ArgumentError, 'Wrong type of argument' unless str.is_a?(String)
   
+    str.reverse
+  end
+ 
  
 end
