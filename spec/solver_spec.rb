@@ -34,22 +34,22 @@ describe Solver do
     end
   end
 
-  describe "#fizzbuzz" do
-    it "Should return the result" do
-      expect(@solver.fizzbuzz(15)).to eql("fizzbuzz")
+  describe '#fizzbuzz' do
+    it 'Should return the result' do
+      expect(@solver.fizzbuzz(15)).to eql('fizzbuzz')
     end
-    it "Should return the result" do
-      expect(@solver.fizzbuzz(5)).to eql("buzz")
+    it 'Should return the result' do
+      expect(@solver.fizzbuzz(5)).to eql('buzz')
     end
-    it "Should return the result" do
-      expect(@solver.fizzbuzz(3)).to eql("fizz")
+    it 'Should return the result' do
+      expect(@solver.fizzbuzz(3)).to eql('fizz')
     end
-    it "Should return the result" do
-      expect(@solver.fizzbuzz(2)).to eql("2")
+    it 'Should return the result' do
+      expect(@solver.fizzbuzz(2)).to eql('2')
     end
-    it "Should raise an exception if is not a positive number or integer" do
+    it 'Should raise an exception if is not a positive number or integer' do
       expect { Solver.new.fizzbuzz(-2) }.to raise_error(ArgumentError)
-      expect { Solver.new.fizzbuzz("hola") }.to raise_error(ArgumentError)
+      expect { Solver.new.fizzbuzz('hola') }.to raise_error(ArgumentError)
     end
   end
 end

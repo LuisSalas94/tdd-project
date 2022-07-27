@@ -1,7 +1,7 @@
 class Solver
   def factorial(num)
     raise ArgumentError, 'Wrong type of argument' if !num.is_a?(Integer) || num.negative?
-    return 1 if num == 0
+    return 1 if num.zero?
 
     num * factorial(num - 1)
   end
@@ -13,14 +13,14 @@ class Solver
   end
 
   def fizzbuzz(num)
-    raise ArgumentError, "Wrong type of argument" if !num.is_a?(Integer) || num.negative?
+    raise ArgumentError, 'Wrong type of argument' if !num.is_a?(Integer) || num.negative?
 
     if (num % 15).zero?
-      "fizzbuzz"
+      'fizzbuzz'
     elsif (num % 5).zero?
-      "buzz"
+      'buzz'
     elsif (num % 3).zero?
-      "fizz"
+      'fizz'
     else
       num.to_s
     end
